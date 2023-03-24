@@ -2,7 +2,7 @@ import re
 
 def rgba_to_imgui_color(rgba_str):
     rgba = [float(x) for x in re.findall(r"[\d.]+", rgba_str)]
-    return f"ImVec4({round(rgba[0]/255, 6)}, {round(rgba[1]/255, 6)}, {round(rgba[2]/255, 6)}, {rgba[3]})"
+    return f"ImVec4({round(rgba[0]/255, 6)}, {round(rgba[1]/255, 6)}, {round(rgba[2]/255, 6)}, {round(rgba[3], 6)})"
 
 
 def toml_to_imgui_style(toml_str):
